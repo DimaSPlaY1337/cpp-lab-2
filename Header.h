@@ -1,3 +1,4 @@
+
 enum class ChetOrNechet : int
 {
 	None,
@@ -14,11 +15,11 @@ enum class FactUpOrDown : int
 
 ChetOrNechet Chetnost;
 FactUpOrDown PlaceOfFactorial;
-float LastNumberOfDwFact;
+long float LastNumberOfDwFact;
 
-int CalculateDoubleFactorial(int k, FactUpOrDown Place)
+long double CalculateDoubleFactorial(int k, FactUpOrDown Place)
 {
-	long dwfact = 1;
+	long double dwfact = 1;
 	switch (Place)
 	{
 	case FactUpOrDown::Up:
@@ -51,12 +52,12 @@ int CalculateDoubleFactorial(int k, FactUpOrDown Place)
 	return dwfact;
 }
 
-float t(float x)
+long double t(double x)
 {
-	float SummUp = 0;
-	float SummDown = 0;
-	int t;
-	for (int k = 0; k < 10; k++)
+	long double SummUp = 0;
+	long double SummDown = 0;
+	long double t;
+	for (int k = 0; k <= 10; k++)
 	{
 		SummUp += pow(x, 2 * k + 1)
 			/
